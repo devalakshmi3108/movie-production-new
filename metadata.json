@@ -1,0 +1,6 @@
+{
+  "name": "Unai Production",
+  "description": "UNAI PRODUCTION - Premium Futuristic Cinematic Website with luxury white-and-blue branding and interactive ticket booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

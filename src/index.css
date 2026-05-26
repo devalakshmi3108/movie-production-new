@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  
+  --color-brand-blue: #1E4DFF;
+  --color-brand-dark: #161b2a;
+}
+
+/* Custom background animations & lighting blur effects */
+.ambient-aura {
+  position: absolute;
+  background: radial-gradient(circle, rgba(30, 77, 255, 0.15) 0%, rgba(135, 165, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 40px -10px rgba(30, 77, 255, 0.08);
+}
+
+.dark-glass-card {
+  background: rgba(22, 27, 42, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-b: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth zoom transition */
+.zoom-trigger img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zoom-trigger:hover img {
+  transform: scale(1.08);
+}
+
+/* Scroll track adjustments for beautiful design */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8FF;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 77, 255, 0.2);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 77, 255, 0.4);
+}
+
+/* Dynamic movie detail vignette */
+.movie-vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(22, 27, 42, 0.95) 0%, rgba(22, 27, 42, 0.4) 50%, transparent 100%);
+  pointer-events: none;
+}
+
